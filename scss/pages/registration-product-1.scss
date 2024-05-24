@@ -1,0 +1,308 @@
+@use "../global";
+@use "../utils/variables" as var;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.home-price {
+  max-width: 400px;
+  background: var(--Yellow, #ffc000);
+  padding: 10px;
+}
+
+.price-1 {
+  padding: 6px 0 10px 6px;
+}
+
+.price-2 {
+  padding: 0 0 10px 6px;
+}
+
+.home {
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 64px;
+  @media (min-width: 1000px) {
+    display: flex;
+  }
+}
+
+.checkbox-1 {
+  display: flex;
+  column-gap: 20px;
+}
+
+.checkbox-2 {
+  display: flex;
+}
+
+.check-rows {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  column-gap: 50px;
+}
+
+.inputs {
+  margin-bottom: 20px;
+  max-width: 558px;
+  background: var(--Grey-7, #f1f1f1);
+  color: rgba(0, 0, 0, 0.4);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.44px;
+  padding: 15px 140px 15px 16px;
+
+  @media (min-width: 1000px) {
+    padding: 15px 340px 15px 16px;
+  }
+}
+
+.right-button {
+  display: flex;
+  padding: 17px 93px;
+  color: var(--Black, #0d0d0d);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  background: var(--Yellow, #ffc000);
+  @media (min-width: 1000px) {
+    padding: 17px 193px;
+  }
+}
+
+.home-titles {
+  padding: 164px 0 80px 0;
+  color: #000;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Montserrat;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.25px;
+}
+
+.home-title {
+  padding: 64px 0 80px 0;
+  color: #000;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Montserrat;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.25px;
+}
+
+.magazin-img {
+  display: grid;
+
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.kategoriya-button {
+  border-radius: 8px;
+  background: var(--Yellow, #ffc000);
+  border: 1px solid transparent;
+  padding: 10px 88px;
+  color: var(--Black, #0d0d0d);
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.15px;
+  @media (min-width: 1000px) {
+    padding: 28px 60px;
+  }
+}
+
+.katogoriya-img {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 20px;
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.buttons {
+  padding: 10px 40px;
+  @media (min-width: 1000px) {
+    padding: 28px 14px;
+  }
+}
+
+.buttons-1 {
+  padding: 10px 96px;
+  @media (min-width: 1000px) {
+    padding: 28px 70px;
+  }
+}
+
+.buttons-2 {
+  padding: 12px 15px;
+  @media (min-width: 1000px) {
+    padding: 12px 15px;
+  }
+}
+
+.hero__card {
+  max-width: 1146px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, auto);
+  background-color: var.$white-color;
+  margin-bottom: 24px;
+  &__img {
+    width: 264px;
+    @media (max-width: 450px) {
+      width: 125px;
+    }
+  }
+  &__right {
+    max-width: 882px;
+    padding: 25px 20px 27px 0;
+    @media (max-width: 450px) {
+      padding-top: 10px;
+    }
+    h3 {
+      color: #040921;
+      font-family: Montserrat700;
+      font-size: 24px;
+      line-height: 140%;
+      @media (max-width: 500px) {
+        max-width: 210px;
+        color: #040921;
+        font-family: Montserrat600;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0.75px;
+        text-transform: uppercase;
+      }
+    }
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 71px;
+      @media (max-width: 500px) {
+        margin-bottom: 10px;
+      }
+      img {
+        @media (max-width: 500px) {
+          display: none;
+        }
+      }
+    }
+    &__paragraph {
+      max-width: 754px;
+      color: #000;
+      font-family: var.$primary-font;
+      font-size: 14px;
+      line-height: 160%;
+      letter-spacing: 0.25px;
+      margin-bottom: 43px;
+      @media (max-width: 700px) {
+        display: none;
+      }
+    }
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 700px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+      &__left {
+        display: flex;
+        @media (max-width: 600px) {
+          // flex-direction: column;
+        }
+      }
+    }
+    .hero__card__size {
+      display: flex;
+      gap: 16px;
+      padding-left: 40px;
+      span {
+        color: #000;
+        text-align: center;
+        font-family: Inter600;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+.hero__price {
+  @media (min-width: 800px) {
+    margin-top: 42px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__left {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    p {
+      color: #000;
+      font-family: Inter600;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  &__right {
+    max-width: 376px;
+    a {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      color: var(--Black, #0d0d0d);
+      font-family: Montserrat600;
+      font-size: 14px;
+      line-height: 140%;
+      letter-spacing: 0.75px;
+      text-transform: uppercase;
+      padding: 18px 83px;
+      background-color: var.$primary-color;
+    }
+  }
+}
+
+.minus {
+  padding: 3px 12px 8px 12px;
+  background-color: var.$primary-color;
+  color: var.$white-color;
+}
+
+.plus {
+  padding: 3px 10px 7px 10px;
+  background-color: var.$primary-color;
+  color: var.$white-color;
+}
+
+.card__number {
+  padding: 3px 30px 7px 30px;
+  background-color: #f2f2f2;
+  margin-left: -4px;
+  margin-right: -4px;
+}

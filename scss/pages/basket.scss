@@ -1,0 +1,61 @@
+@use "../global";
+
+#basket__kategories {
+    color: #000;
+    padding: 64px;
+    padding-top: 170px;
+    h2 {
+        text-align: center;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 140%;
+        letter-spacing: 0.25px;
+        margin-bottom: 24px;
+    }
+
+.kategories__shop {
+    text-align: center;
+    span {
+            img {
+    
+                margin-bottom: 26px;
+                max-width: 264px;
+                width: 100%;
+            }
+    
+            h4 {
+                margin-bottom: 24px;
+                font-variant-numeric: lining-nums proportional-nums;
+                font-size: 25px;
+                font-weight: 400;
+                line-height: 130%;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+
+}
+
+
+@media (min-width:720px ) {
+    .kategories__shop {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+}
+
+
+@media (min-width:940px) {
+    .kategories__shop {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width:1200px) {
+    .kategories__shop {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

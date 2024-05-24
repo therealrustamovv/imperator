@@ -1,0 +1,229 @@
+@use "../utils/variables" as var;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: var.$primary-font;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+#backtop {
+  position: fixed;
+  right: -35px;
+  bottom: -30px;
+  font-size: 35px;
+  color: black;
+  transition: 0.5s;
+  z-index: 100;
+}
+
+#backtop.backtop-show {
+  right: 30px;
+  bottom: 30px;
+}
+
+// LOADER
+
+#loading {
+  position: fixed;
+  background-color: rgba(34, 34, 36, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+#loading.loading-none {
+  opacity: 0;
+  z-index: -1;
+}
+
+.loader {
+  color: #ffffff;
+  font-size: 45px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  transform: translateZ(0);
+  animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+}
+
+@keyframes mltShdSpin {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em,
+      -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em,
+      -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+      -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+
+@keyframes round {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// END
+
+#mode-btn {
+  position: fixed;
+  right: 0;
+  top: 120px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: rgb(66, 49, 142);
+  z-index: 100;
+  img {
+    width: 30px;
+  }
+}
+
+// DARK MODE
+
+.dark #hero {
+  box-shadow: inset 0 303px var.$black-color, inset 0 696px var.$black-color,
+    inset 0 999px var.$black-color;
+}
+
+.dark .active-navbar {
+  color: var.$primary-color;
+}
+
+.dark header .login {
+  background-color: var.$primary-color;
+}
+
+
+.dark footer,
+.dark header,
+.dark #service,
+.dark #best__product,
+.dark #category,
+.dark #adv,
+.dark #new__product,
+.dark #imperia,
+.dark .imperia__right,
+.dark #discount,
+.dark .container__full,
+.dark #about,
+.dark #world,
+.dark #add,
+.dark #product,
+.dark #basket__kategories,
+.dark #profil,
+.dark #payment,
+.dark #zakaz,
+.dark #magazin,
+.dark #category__eror,
+.dark .hero__left,
+.dark #navbar-responsive {
+  background-color: var.$black-color;
+  transition: 0.5s;
+}
+
+
+
+.dark .discount,
+.dark .category__card__hover {
+  background-color: var.$primary-color;
+}
+
+.dark .footer *,
+.dark .basket,
+.dark header *,
+.dark #service *,
+.dark #best__product *,
+.dark #new__product *,
+.dark .imperia__right *,
+.dark #backtop,
+.dark #about *,
+.dark #adv *,
+.dark #world *,
+.dark #add *,
+.dark .login-hero *,
+.dark #category *,
+.dark #product *,
+.dark #basket__kategories *,
+.dark #hero *,
+.dark #profil *,
+.dark #payment *,
+.dark .footer__mobile *,
+.dark #footer__bottom,
+.dark #magazin *,
+.dark #category__eror *,
+.dark #navbar-responsive * {
+  color: var.$white-color;
+}
+
+.dark .service__card,
+.dark .product__card {
+  background-color: var.$black333-color;
+}
+
+
+.dark #toggle-password,
+.dark #hero .hero__card *,
+.dark #hero_card * {
+  color: var.$dark-color
+}

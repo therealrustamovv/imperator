@@ -1,0 +1,133 @@
+@use "../utils/variables" as var;
+
+footer {
+  padding: 46px 0 42px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 501px) {
+    display: none;
+  }
+  &__left {
+    display: flex;
+    gap: 29px;
+    &__imperia {
+      h4 {
+        color: var(--Black, #000);
+        font-family: Montserrat600;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0.75px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+      p {
+        max-width: 265px;
+        color: var(--Black, #000);
+        font-family: var.$primary-font;
+        font-size: 14px;
+        line-height: 160%;
+        letter-spacing: 0.25px;
+        margin-bottom: 15px;
+      }
+    }
+    &__contact,
+    &__work {
+      margin-bottom: 38px;
+      h4 {
+        color: var(--Black, #000);
+        font-family: Montserrat600;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0.75px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+      p {
+        color: var(--Black, #000);
+        font-family: var.$primary-font;
+        font-size: 14px;
+        line-height: 160%;
+        letter-spacing: 0.25px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    gap: 173px;
+    &__menu,
+    &__category {
+      h4 {
+        color: var(--Black, #000);
+        font-family: Montserrat600;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0.75px;
+        text-transform: uppercase;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        color: var(--Black, #000);
+        font-family: var.$primary-font;
+        font-size: 14px;
+        line-height: 160%;
+        letter-spacing: 0.25px;
+      }
+    }
+  }
+}
+
+.footer__mobile {
+    @media (min-width: 499px) {
+        display: none;
+    }
+  &__title {
+    max-width: 303px;
+    color: #000;
+    font-family: var.$secondary-font;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 30px;
+    li {
+      color: #000;
+      font-family: var.$secondary-font;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 34px;
+      margin-bottom: 12px;
+    }
+  }
+  &__bottom {
+    padding: 32px 0;
+    .footer__location,
+    .footer__email {
+      display: flex;
+      align-items: start;
+      gap: 16px;
+      margin-bottom: 17px;
+      p {
+        color: #000;
+        font-family: var.$secondary-font;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+

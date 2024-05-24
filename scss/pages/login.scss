@@ -1,0 +1,92 @@
+@use "../global";
+@use "../utils/variables" as var;
+
+#hero {
+    background-color: var.$bgc2-white;
+    transition: 0.5s;
+}
+
+.hero {
+  padding: 180px 20px 64px;
+  &__left {
+    margin-bottom: 56px;
+  }
+  &__title {
+    color: #000;
+    text-align: start;
+    font-family: Montserrat700;
+    font-size: 34px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    margin-bottom: 64px;
+    @media (min-width: 1000px) {
+      text-align: center;
+    }
+  }
+  .email,
+  .password {
+    max-width: 555px;
+    margin-bottom: 16px;
+    input {
+      width: 100%;
+      color: #000;
+      font-family: var.$secondary-font;
+      font-size: 18px;
+      line-height: 32px;
+      border: 1px solid #dbdee7;
+      border-radius: 8px;
+      padding: 10px 0 10px 12px;
+    }
+    input::placeholder {
+      color: #000;
+    }
+    label {
+      display: inline-block;
+      color: #000;
+      font-family: var.$secondary-font;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      margin-bottom: 8px;
+    }
+  }
+  .password {
+    position: relative;
+    i {
+      position: absolute;
+      font-size: 25px;
+      top: 35px;
+      right: 15px;
+      cursor: pointer;
+    }
+  }
+  .submit__btn {
+    max-width: 340px;
+    @media (min-width: 1100px) {
+      max-width: 262px;
+    }
+    button {
+      width: 100%;
+      color: var.$black-color;
+      text-align: center;
+      font-family: Inter600;
+      font-size: 16px;
+      line-height: 140%;
+      padding: 13px 0;
+      background-color: var.$primary-color;
+      border-radius: 6px;
+      margin-top: 14px;
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .hero__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    .hero__right {
+        padding-top: 50px;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@use "../global";
+
+// add start
+.add {
+  padding: 272px 0px 80px;
+  &__info {
+    display: flex;
+    gap: 40px;
+    @media (max-width: 1200px) {
+      & {
+        flex-direction: column;
+      }
+    }
+  }
+  &__left {
+    &__title {
+      width: 568px;
+      color: #000;
+      font-family: Montserrat900;
+      font-size: 46px;
+      line-height: 64px;
+      margin-bottom: 72px;
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+      @media (max-width: 500px) {
+        font-size: 25px;
+        line-height: 30px;
+        max-width: 300px;
+      }
+    }
+  }
+  &__h3 {
+    color: #000;
+    font-family: Inter700;
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 8px;
+  }
+  &__text {
+    color: #000;
+    font-family: Inter400;
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 44px;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+  }
+  &__input {
+    width: 555px;
+    padding: 14px 10px 14px 24px;
+    border: 1px solid #dbdee7;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+    &::placeholder {
+      color: #000;
+      font-family: Inter400;
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+  &__textarea {
+    height: 132px;
+    resize: none;
+    width: 555px;
+    padding: 12px 10px 14px 24px;
+    border: 1px solid #dbdee7;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+    &::placeholder {
+      color: #000;
+      font-family: Inter400;
+      font-size: 16px;
+      line-height: 32px;
+      margin-bottom: 36px;
+    }
+  }
+  &__btn {
+    max-width: 262px;
+    background-color: #ffc000;
+    padding: 13px 0px;
+    border-radius: 6px;
+    color: var(--Black, #0d0d0d);
+    text-align: center;
+    font-family: Inter600;
+    font-size: 20px;
+    line-height: 34px;
+  }
+}

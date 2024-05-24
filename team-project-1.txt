@@ -1,0 +1,26 @@
+TEAM PROJECT INFORMATION
+
+github link: https://github.com/yoqubovabdulaziz/imperator.git
+vercel link: https://imperator-abdulazizs-projects-e3b2cac2.vercel.app/
+
+index: Abdulaziz
+login: Abdulaziz
+(header va footer): Abdulaziz
+
+about: Hamidullo
+partner: Hamidullo
+
+product-1: Saidaziz
+profil: Saidaziz
+
+category: jaloliddin
+basket: jaloliddin
+
+payment: Azizbek aka
+product-4: Azizbek aka
+registration-product-2: Azizbek aka
+
+registration-product-1: Ibrohim
+registration: Ibrohim
+
+product-2: Muhriddin aka
